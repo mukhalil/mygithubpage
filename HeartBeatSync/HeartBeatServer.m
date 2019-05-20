@@ -10,14 +10,6 @@
 
 @implementation HeartBeatServer
 
--(instancetype)initServerWithDelegate:(id<HeartBeatServerDelegate>)delegate {
-    self = [super init];
-    if (self) {
-        self.delegate = delegate;
-    }
-    return self;
-}
-
 -(void)sendBuffer:(NSMutableArray<HeartBeatObject *> *)buffer {
     //Receiving beat
     //Generate 0 or 1
@@ -27,6 +19,7 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
             NSLog(@"Network Response received!");
             [self.delegate sendAcknowledgement:self ofReceivedBuffer:buffer];
+            [self.vcDelegate sendAcknowledgement:self ofReceivedBuffer:buffer];
         });
     }
 }

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "HeartBeatGenerator.h"
 #import "HeartBeatManager.h"
+#import "HeartBeatServer.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <HeartBeatGeneratorDelegate, HeartBeatServerDelegate>
 
 @end
 

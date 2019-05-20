@@ -12,6 +12,8 @@
 
 @interface HeartBeatManager : NSObject <HeartBeatGeneratorDelegate, HeartBeatServerDelegate>
 
+@property (nonatomic, strong) HeartBeatServer *server;
+
 -(instancetype)initWithBufferSize:(NSInteger)bufferSize;
 
 @end

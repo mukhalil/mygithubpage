@@ -10,14 +10,12 @@
 
 @implementation HeartBeatManager {
     NSMutableArray<HeartBeatObject *> *buffer;
-    HeartBeatServer *server;
 }
 
 -(instancetype)initWithBufferSize:(NSInteger)bufferSize {
     self = [super init];
     if (self) {
         buffer = [[NSMutableArray alloc] initWithCapacity:bufferSize];
-        server = [[HeartBeatServer alloc] initServerWithDelegate:self];
     }
     return self;
 }
@@ -42,7 +40,7 @@
 -(void)sendBufferToServer {
     //Send buffer to server
     if (buffer.count > 0) {
-        [server sendBuffer:buffer];
+        [self.server sendBuffer:buffer];
     }
 }
 

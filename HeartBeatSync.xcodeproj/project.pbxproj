@@ -17,6 +17,10 @@
 		BB7CBB44228DF84A00C0EDE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7CBB43228DF84A00C0EDE6 /* Assets.xcassets */; };
 		BB7CBB47228DF84A00C0EDE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7CBB45228DF84A00C0EDE6 /* LaunchScreen.storyboard */; };
 		BB7CBB4A228DF84A00C0EDE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7CBB49228DF84A00C0EDE6 /* main.m */; };
+		BBF93AC2228ECCB3005E6565 /* HeartBeatBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF93AC1228ECCB3005E6565 /* HeartBeatBubbleView.m */; };
+		BBF93AC52290C402005E6565 /* HeartBeatBufferView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF93AC42290C402005E6565 /* HeartBeatBufferView.m */; };
+		BBF93AC82292ABDA005E6565 /* HeartBeatSingleBeatView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF93AC72292ABDA005E6565 /* HeartBeatSingleBeatView.m */; };
+		BBF93ACA2292B1F5005E6565 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = BBF93AC92292B1F5005E6565 /* heart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,13 @@
 		BB7CBB46228DF84A00C0EDE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7CBB48228DF84A00C0EDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7CBB49228DF84A00C0EDE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BBF93AC0228ECCB3005E6565 /* HeartBeatBubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartBeatBubbleView.h; sourceTree = "<group>"; };
+		BBF93AC1228ECCB3005E6565 /* HeartBeatBubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeartBeatBubbleView.m; sourceTree = "<group>"; };
+		BBF93AC32290C402005E6565 /* HeartBeatBufferView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartBeatBufferView.h; sourceTree = "<group>"; };
+		BBF93AC42290C402005E6565 /* HeartBeatBufferView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeartBeatBufferView.m; sourceTree = "<group>"; };
+		BBF93AC62292ABDA005E6565 /* HeartBeatSingleBeatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartBeatSingleBeatView.h; sourceTree = "<group>"; };
+		BBF93AC72292ABDA005E6565 /* HeartBeatSingleBeatView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeartBeatSingleBeatView.m; sourceTree = "<group>"; };
+		BBF93AC92292B1F5005E6565 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +81,17 @@
 		BB7CBB39228DF84800C0EDE6 /* HeartBeatSync */ = {
 			isa = PBXGroup;
 			children = (
+				BBF93AC92292B1F5005E6565 /* heart.png */,
 				BB7CBB3A228DF84800C0EDE6 /* AppDelegate.h */,
 				BB7CBB3B228DF84800C0EDE6 /* AppDelegate.m */,
 				BB7CBB3D228DF84800C0EDE6 /* ViewController.h */,
 				BB7CBB3E228DF84800C0EDE6 /* ViewController.m */,
+				BBF93AC62292ABDA005E6565 /* HeartBeatSingleBeatView.h */,
+				BBF93AC72292ABDA005E6565 /* HeartBeatSingleBeatView.m */,
+				BBF93AC32290C402005E6565 /* HeartBeatBufferView.h */,
+				BBF93AC42290C402005E6565 /* HeartBeatBufferView.m */,
+				BBF93AC0228ECCB3005E6565 /* HeartBeatBubbleView.h */,
+				BBF93AC1228ECCB3005E6565 /* HeartBeatBubbleView.m */,
 				BB40BBA6228E1541002A45D6 /* HeartBeatObject.h */,
 				BB40BBA7228E1541002A45D6 /* HeartBeatObject.m */,
 				BB40BBA2228E060F002A45D6 /* HeartBeatGenerator.h */,
@@ -150,6 +168,7 @@
 			files = (
 				BB7CBB47228DF84A00C0EDE6 /* LaunchScreen.storyboard in Resources */,
 				BB7CBB44228DF84A00C0EDE6 /* Assets.xcassets in Resources */,
+				BBF93ACA2292B1F5005E6565 /* heart.png in Resources */,
 				BB7CBB42228DF84800C0EDE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,8 +185,11 @@
 				BB40BBAB228E175E002A45D6 /* HeartBeatServer.m in Sources */,
 				BB7CBB4A228DF84A00C0EDE6 /* main.m in Sources */,
 				BB40BBA8228E1541002A45D6 /* HeartBeatObject.m in Sources */,
+				BBF93AC82292ABDA005E6565 /* HeartBeatSingleBeatView.m in Sources */,
 				BB40BBA1228E035B002A45D6 /* HeartBeatGenerator.m in Sources */,
+				BBF93AC52290C402005E6565 /* HeartBeatBufferView.m in Sources */,
 				BB7CBB3C228DF84800C0EDE6 /* AppDelegate.m in Sources */,
+				BBF93AC2228ECCB3005E6565 /* HeartBeatBubbleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

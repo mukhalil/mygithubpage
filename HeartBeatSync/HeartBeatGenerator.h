@@ -2,7 +2,7 @@
 //  HeartBeatGenerator.h
 //  HeartBeatSync
 //
-//  Created by Usama Khalil on 5/16/19.
+//  Created by Muhammad Khalil on 5/16/19.
 //  Copyright © 2019 Muhammad Khalil. All rights reserved.
 //
 
@@ -23,9 +23,11 @@
 
 @property (nonatomic, assign) NSInteger pulseCycle;
 @property (nonatomic, weak) id<HeartBeatGeneratorDelegate> delegate;
+@property (nonatomic, weak) id<HeartBeatGeneratorDelegate> viewControllerDelegate;
 
 -(instancetype)initGeneratorWithPulseCycle:(NSInteger)seconds
-                                  delegate:(id<HeartBeatGeneratorDelegate>)delegate;
+                                  delegate:(id<HeartBeatGeneratorDelegate>)delegate
+                                vcDelegate:(id<HeartBeatGeneratorDelegate>)vcDelegate;
 
 @end
 

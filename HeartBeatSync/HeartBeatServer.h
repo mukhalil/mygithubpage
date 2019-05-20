@@ -22,9 +22,8 @@
 @interface HeartBeatServer : NSObject
 
 @property (nonatomic, weak) id<HeartBeatServerDelegate> delegate;
+@property (nonatomic, weak) id<HeartBeatServerDelegate> vcDelegate;
 
 -(void)sendBuffer:(NSMutableArray<HeartBeatObject *> *)buffer;
-
--(instancetype)initServerWithDelegate:(id<HeartBeatServerDelegate>)delegate;
 
 @end

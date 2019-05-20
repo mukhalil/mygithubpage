@@ -14,11 +14,13 @@
 }
 
 -(instancetype)initGeneratorWithPulseCycle:(NSInteger)seconds
-                                  delegate:(id<HeartBeatGeneratorDelegate>)delegate {
+                                  delegate:(id<HeartBeatGeneratorDelegate>)delegate
+                                vcDelegate:(id<HeartBeatGeneratorDelegate>)vcDelegate {
     self = [super init];
     if (self) {
         self.pulseCycle = seconds;
         self.delegate = delegate;
+        self.viewControllerDelegate = vcDelegate;
         curID = 0;
         [self initiateTimer];
     }
@@ -39,6 +41,7 @@
     NSInteger beat = 50 + arc4random() % 31;
     HeartBeatObject *beatObj = [[HeartBeatObject alloc] initWithID:curID pulse:beat];
     [self.delegate beatGenerated:self beat:beatObj];
+    [self.viewControllerDelegate beatGenerated:self beat:beatObj];
 
     curID++;
 }
